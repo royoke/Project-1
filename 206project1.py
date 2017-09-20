@@ -101,7 +101,7 @@ def mySortPrint(a,col,fileName):
 	header_list = ["First", "Last", "Email"]
 	for data in sorted_data:
 		for header in header_list:
-			user_file.write(data[header] + ",")
+				user_file.write(data[header] + ",")
 		user_file.write('\n')
 	user_file.close()
 
@@ -130,7 +130,7 @@ def main():
 	print("Read in Test data and store as a list of dictionaries")
 	data = getData('P1DataA.csv')
 	data2 = getData('P1DataB.csv')
-	total += test(type(data),type([]),35)
+	total += test(type(data),type([]),40)
 	print()
 	print("First student sorted by First name:")
 	total += test(mySort(data,'First'),'Abbot Le',15)
