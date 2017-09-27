@@ -82,8 +82,13 @@ def findAge(a):
 	#Your code here:
 	age_list = []
 	for user_dict in a:
+		birth_day = int(user_dict['DOB'].split('/')[0])
+		birth_month = int(user_dict['DOB'].split('/')[1])
 		birth_year = int(user_dict["DOB"].split('/')[2])
-		age = 2017 - birth_year
+		if birth_month <= 9:
+			age = 2017 - birth_year + 1
+		if birth_month > 9:
+			age = 2017 - birth_year
 		age_list.append(age)
 	total_years = 0
 	for age in age_list:
